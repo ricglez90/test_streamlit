@@ -35,7 +35,7 @@ if filename is not None:
     b,g,r = I.split()
     I_np = np.array(Image.merge("RGB", (b,g,r)))
     A = AgroImage(I_np)
-    left_column, right_column = st.beta_columns(2)
+    left_column, right_column = st.columns(2)
     
     
 
@@ -94,7 +94,7 @@ if filename is not None:
                     
                 
             
-        col1, col2, col3 = st.beta_columns(3)
+        col1, col2, col3 = st.columns(3)
         with col1:
             st.subheader("Color feature 1")
             st.image(Image.fromarray(cv2.applyColorMap(C1,cv2.COLORMAP_JET)))
